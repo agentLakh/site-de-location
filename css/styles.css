@@ -1,0 +1,532 @@
+/* ==== CORPS PRINCIPAL ==== */
+body {
+    background-image: linear-gradient(100deg, #2d4059, #9ba6a5);
+    color: #000000;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    transition: 0.3s linear;
+}
+
+/* ==== CONTENEUR PRINCIPAL ==== */
+.container {
+    padding: 20px;
+}
+.title {
+    text-align: center; /* Centre horizontalement le texte */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 10px; /* Supprime les espacements internes par défaut */
+}
+
+/* ==== BARRE SUPÉRIEURE (TOP) ==== */
+.top {
+    position: relative;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(244, 244, 249, 0.3);
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 90%; /* Occupe 90% de la largeur de l'écran */
+    max-width: 1200px; /* Largeur maximale */
+}
+
+.top ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.top ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top ul li img {
+    width: 20px;
+    margin-bottom: 5px;
+}
+
+.top ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 15px;
+}
+
+.top ul li a:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px;
+}
+
+/* ==== CONTENU PRINCIPAL ==== */
+.content {
+    padding: 100px 20px 20px; /* Laisse un espace sous le top */
+    text-align: center;
+    color: #000000;
+}
+
+/* ==== SECTION DES PRODUITS ==== */
+.products-container {
+    display: flex;
+    flex-direction: column; /* Boîtes empilées verticalement */
+    gap: 20px; /* Espacement entre les boîtes */
+    padding: 20px;
+    max-width: 100%; /* Prend toute la largeur de l'écran */
+    margin: 20px 0; /* Ajoute un espace au-dessus et en-dessous */
+}
+
+.product-box {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 100%; /* Prend toute la largeur */
+}
+
+.product-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.product-box img {
+    width: 70%; /* L'image prend toute la largeur de la boîte */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-box h3 {
+    font-size: 1.5em;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.buy-button {
+    background-image: linear-gradient(100deg, #2d4059, #9ba6a5);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-button:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px;
+}
+
+/* ==== BARRE INFÉRIEURE (BOTTOM) ==== */
+.bottom {
+    position: relative;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(244, 244, 249, 0.3);
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 90%; /* Occupe 90% de la largeur de l'écran */
+    max-width: 1200px; /* Largeur maximale */
+}
+
+.bottom ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bottom ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom ul li .icon {
+    width: 16px;
+}
+
+.bottom ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 8px 12px;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 15px;
+}
+
+.bottom ul li a:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px;
+}
+
+
+
+
+
+
+/* Section des produits 2 */
+.products-container-2 {
+    display: flex;
+    flex-wrap: wrap; /* Permet de faire passer les éléments à la ligne si nécessaire */
+    gap: 15px; /* Réduction de l'espace entre les boîtes */
+    justify-content: space-between; /* Assure un espacement équitable entre les éléments */
+    padding: 20px;
+    max-width: 100%; /* Assure que la section prend toute la largeur disponible */
+    margin: 0 auto; /* Centrer la section horizontalement */
+}
+
+/* Style pour chaque boîte produit 2 */
+.product-box-2 {
+    background-color: rgba(255, 255, 255, 0.1); /* Fond translucide */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+    padding: 10px; /* Réduction de l'espace intérieur */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animation */
+    width: calc(25% - 15px); /* Prendre 25% de la largeur moins l'espacement */
+    text-align: center; /* Centrer le contenu */
+    box-sizing: border-box; /* Assure que le padding ne déforme pas la largeur */
+}
+
+/* Réduction de la taille des images et du texte */
+.product-box-2 img {
+    width: 100%; /* L'image prend toute la largeur de la boîte */
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.product-box-2 h3 {
+    font-size: 1.2em; /* Réduction de la taille du titre */
+    color: #000000;
+    margin: 10px 0;
+}
+
+/* Bouton "Acheter" */
+.buy-button-2 {
+    background-image: linear-gradient(100deg, #2d4059, #9ba6a5);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px; /* Réduction du padding pour ajuster la taille */
+    font-size: 0.9em; /* Réduction de la taille du texte */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-button-2:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px;
+}
+
+
+
+h1 {
+    text-align: left;
+    margin-left: 20px; /* Si vous voulez ajouter un léger décalage par rapport au bord */
+}
+
+
+
+/* Section pour la barre des réseaux sociaux et le logo */
+.social-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: rgba(244, 244, 249, 0);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Icônes de réseaux sociaux à gauche */
+.social-icons-left {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 30px; /* Ajuster la taille des icônes */
+    height: auto;
+}
+
+/* Logo centré */
+.logo-container {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.logo {
+    width: 150px; /* Ajuster la taille du logo */
+    height: auto;
+}
+
+/* Icônes à droite (recherche et panier) */
+.search-cart-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    width: 30px; /* Ajuster la taille des icônes */
+    height: auto;
+    cursor: pointer;
+}
+
+/* Si vous souhaitez que l'icône de recherche change de couleur au survol */
+.search-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+
+/* Si vous souhaitez que l'icône du panier change de couleur au survol */
+.cart-icon:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+/* ===== Pour les petits écrans (smartphones) ===== */
+@media (max-width: 768px) {
+    /* Adapter la taille des produits */
+    .product-box-2 {
+        width: calc(50% - 15px); /* 2 produits par ligne */
+    }
+
+    /* Adapter la taille des boutons */
+    .buy-button-2 {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    /* Logo centré dans la barre des réseaux sociaux */
+    .logo {
+        width: 80px;
+    }
+
+    /* Réduire l'espacement entre les sections */
+    .social-bar {
+        padding: 10px 15px;
+    }
+
+    /* Adaptation de la taille des icônes dans la barre supérieure */
+    .top ul li img {
+        width: 16px; /* Réduire la taille des icônes */
+    }
+
+    /* Adaptation des images des produits */
+    .product-box img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    /* Adapter la taille des produits */
+    .product-box-2 {
+        width: calc(50% - 15px); /* 2 produits par ligne */
+    }
+
+    /* Adapter la taille des boutons */
+    .buy-button-2 {
+        font-size: 0.8em;
+        padding: 6px 12px;
+    }
+
+    /* Logo centré dans la barre des réseaux sociaux */
+    .logo {
+        width: 60px; /* Réduction de la taille du logo */
+    }
+
+    /* Réduire l'espacement entre les sections */
+    .social-bar {
+        padding: 8px 12px; /* Réduction du padding */
+        flex-direction: column; /* Empiler les éléments pour un meilleur rendu */
+    }
+
+    /* Icônes des réseaux sociaux à gauche */
+    .social-icons-left {
+        gap: 10px; /* Réduction de l'espacement entre les icônes */
+    }
+
+    .social-icon {
+        width: 24px; /* Réduction de la taille des icônes des réseaux sociaux */
+        height: auto;
+    }
+
+    /* Réduire la taille des icônes de recherche et panier */
+    .search-cart-icons {
+        gap: 15px; /* Réduction de l'espacement */
+    }
+
+    .search-icon,
+    .cart-icon {
+        width: 24px; /* Réduction de la taille des icônes */
+        height: auto;
+    }
+
+    /* Réduire la taille des icônes dans la barre supérieure */
+    .top ul li img {
+        width: 14px; /* Réduction de la taille des icônes */
+    }
+
+    /* Adapter la barre supérieure */
+    .top {
+        padding: 8px 12px; /* Réduction du padding */
+        width: 80%; /* Réduction de la largeur de la barre supérieure */
+        max-width: 100%; /* S'assurer qu'il n'y a pas de débordement */
+    }
+
+    /* Adapter la barre inférieure */
+    .bottom {
+        padding: 8px 12px; /* Réduction du padding */
+        width: 80%; /* Réduction de la largeur de la barre inférieure */
+        max-width: 100%; /* S'assurer qu'il n'y a pas de débordement */
+    }
+
+    /* Adapter les images des produits */
+    .product-box img {
+        width: 80%; /* Réduire la taille de l'image */
+        max-width: 150px; /* Limiter la taille des images */
+    }
+
+    /* Ajuster la largeur de la boîte des produits */
+    .product-box {
+        width: 100%; /* Assurer que chaque boîte de produit prend 100% de l'espace */
+        padding: 10px;
+    }
+}
+
+
+.product-box {
+    width: 100%;
+    text-align: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+    overflow: hidden; /* Cache les images en dehors du conteneur */
+}
+
+.image-slider {
+    display: flex; /* Permet d'aligner les images horizontalement */
+    animation: slide 10s infinite; /* Animation pour défiler les images */
+}
+
+.image-slider img {
+    width: 50%; /* Adapte les images à la largeur du conteneur */
+    flex-shrink: 0; /* Empêche les images de se rétrécir */
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); } /* Première image visible */
+    33% { transform: translateX(-100%); } /* Deuxième image visible */
+    66% { transform: translateX(-200%); } /* Troisième image visible */
+    100% { transform: translateX(0); } /* Retour à la première image */
+}
+
+.buy-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+/* Interface de location */
+.location-interface {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+.product-image img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.date-selection {
+    margin-bottom: 20px;
+}
+
+.date-selection label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.date-selection input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.price-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.product-description {
+    margin-bottom: 20px;
+}
+
+.payment-method select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.buy-button {
+    background-image: linear-gradient(100deg, #2d4059, #9ba6a5);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buy-button:hover {
+    background-color: white;
+    box-shadow: #fff8 0 0 10px;
+}
