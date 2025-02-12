@@ -24,3 +24,24 @@
 
          alert(`Location confirmée !\nMoyen de paiement : ${paymentMethod}\nPrix total : ${totalPrice} €`);
      }
+
+     // Gestion du menu déroulant
+document.addEventListener("DOMContentLoaded", function() {
+    const profileIcon = document.getElementById("profile-icon");
+    const dropdownContent = document.getElementById("dropdown-content");
+
+    // Afficher ou masquer le menu déroulant au clic sur l'icône de profil
+    profileIcon.addEventListener("click", function(event) {
+        event.stopPropagation(); // Empêche la propagation du clic
+        if (dropdownContent.style.display === "block") {
+            dropdownContent.style.display = "none";
+        } else {
+            dropdownContent.style.display = "block";
+        }
+    });
+
+    // Masquer le menu déroulant si on clique ailleurs sur la page
+    document.addEventListener("click", function() {
+        dropdownContent.style.display = "none";
+    });
+});
